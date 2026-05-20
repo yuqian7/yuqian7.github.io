@@ -10899,9 +10899,9 @@ p.lead {
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    max-width: 11.5rem;
+    max-height: 11.5rem;
+    border: 0.45rem solid rgba(255, 255, 255, 0.35);
   }
   #sideNav .navbar-collapse {
     display: flex;
@@ -10968,5 +10968,188 @@ section.resume-section .resume-section-content {
     padding-right: 3rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+}
+
+#sideNav.bg-primary {
+  background-color: #111 !important;
+}
+
+.portfolio-hero {
+  position: relative;
+  overflow: hidden;
+  max-width: none;
+  background-color: #f7f7f5;
+  background-image: radial-gradient(#d8d8d8 1.2px, transparent 1.2px);
+  background-size: 52px 52px;
+}
+
+.portfolio-hero-content {
+  position: relative;
+  max-width: 68rem;
+}
+
+.portfolio-year {
+  margin-left: 0;
+  margin-bottom: 1.25rem;
+  color: #b7b7b7;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1rem;
+  letter-spacing: 0.35rem;
+}
+
+.portfolio-title {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  min-height: 8rem;
+}
+
+.portfolio-intro {
+  position: relative;
+  z-index: 1;
+  color: #111;
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.portfolio-title h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #0c0c0c;
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 2.1rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 0.95;
+  text-transform: none;
+}
+
+.portfolio-tags {
+  margin-top: 1rem;
+  margin-left: 0;
+  color: #111;
+  font-size: 1.05rem;
+  letter-spacing: 0.08rem;
+}
+
+.portfolio-summary {
+  max-width: 54rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.portfolio-contact {
+  margin-top: 4.5rem;
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.portfolio-contact a {
+  color: #111;
+  text-decoration: none;
+}
+
+section.resume-section:not(.portfolio-hero) {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+section.resume-section:not(.portfolio-hero) h2 {
+  margin-bottom: 2rem !important;
+  color: #111;
+  font-size: 2.1rem;
+  line-height: 1.15;
+  text-transform: none;
+}
+
+section.resume-section:not(.portfolio-hero) h3 {
+  color: #111;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  text-transform: none;
+}
+
+section.resume-section:not(.portfolio-hero) .subheading {
+  color: #555;
+  font-family: var(--bs-body-font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  text-transform: none;
+}
+
+section.resume-section:not(.portfolio-hero) p,
+section.resume-section:not(.portfolio-hero) li,
+section.resume-section:not(.portfolio-hero) .text-primary {
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+section.resume-section:not(.portfolio-hero) .mb-5 {
+  margin-bottom: 2rem !important;
+}
+
+#sideNav .navbar-nav .nav-item .nav-link {
+  font-size: 0.95rem;
+  letter-spacing: 0.02rem;
+  text-transform: none;
+}
+
+@media (max-width: 767.98px) {
+  .portfolio-hero {
+    align-items: flex-start;
+    padding-top: 6rem;
+  }
+
+  .portfolio-year {
+    margin-left: 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.22rem;
+  }
+
+  .portfolio-title {
+    display: block;
+    min-height: 0;
+  }
+
+  .portfolio-intro {
+    margin-bottom: 0.6rem;
+    font-size: 1.7rem;
+  }
+
+  .portfolio-title h1 {
+    font-size: 1.7rem;
+  }
+
+  .portfolio-tags {
+    margin-top: 1.8rem;
+    margin-left: 0;
+    font-size: 0.95rem;
+  }
+
+  .portfolio-summary {
+    margin-top: 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .portfolio-contact {
+    margin-top: 3rem;
+  }
+
+  section.resume-section:not(.portfolio-hero) h2 {
+    font-size: 1.8rem;
+  }
+
+  section.resume-section:not(.portfolio-hero) h3 {
+    font-size: 1.2rem;
   }
 }
