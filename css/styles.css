@@ -10827,14 +10827,15 @@ textarea.form-control-lg {
   }
 }
 body {
-  padding-top: 3.375rem;
+  padding-top: 0;
+  padding-left: clamp(18rem, 25vw, 26rem);
   color: #6c757d;
 }
 
 @media (min-width: 992px) {
   body {
     padding-top: 0;
-    padding-left: 17rem;
+    padding-left: clamp(20rem, 25vw, 26rem);
   }
 }
 h1, .h1,
@@ -10868,8 +10869,20 @@ p.lead {
 }
 
 #sideNav {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: clamp(18rem, 25vw, 26rem);
+  height: 100vh;
+  padding-top: 5.5rem;
 }
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 800;
@@ -10878,6 +10891,39 @@ p.lead {
 }
 #sideNav .navbar-toggler:focus {
   outline-color: #d48a6e;
+}
+#sideNav .navbar-brand {
+  display: flex;
+  flex: 0 0 auto;
+  margin: 0 auto 1.5rem;
+  padding: 0.5rem;
+}
+#sideNav .navbar-brand .img-profile {
+  max-width: 15rem;
+  max-height: 15rem;
+  border: 0.5rem solid rgba(255, 255, 255, 0.35);
+}
+#sideNav .navbar-collapse {
+  display: flex;
+  flex: 0 0 auto;
+  flex-basis: auto !important;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0;
+}
+#sideNav .navbar-collapse .navbar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#sideNav .navbar-collapse .navbar-nav .nav-item {
+  display: block;
+}
+#sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+  display: block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 @media (min-width: 992px) {
@@ -10890,25 +10936,31 @@ p.lead {
     left: 0;
     display: flex;
     flex-direction: column;
-    width: 17rem;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: clamp(20rem, 25vw, 26rem);
     height: 100vh;
+    padding-top: 5.5rem;
   }
   #sideNav .navbar-brand {
     display: flex;
-    margin: auto auto 0;
+    flex: 0 0 auto;
+    margin: 0 auto 1.5rem;
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 11.5rem;
-    max-height: 11.5rem;
-    border: 0.45rem solid rgba(255, 255, 255, 0.35);
+    max-width: 15rem;
+    max-height: 15rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.35);
   }
   #sideNav .navbar-collapse {
     display: flex;
-    align-items: flex-start;
-    flex-grow: 0;
+    flex: 0 0 auto;
+    flex-basis: auto !important;
+    align-items: center;
     width: 100%;
-    margin-bottom: auto;
+    margin-bottom: 0;
   }
   #sideNav .navbar-collapse .navbar-nav {
     flex-direction: column;
@@ -10919,6 +10971,28 @@ p.lead {
   }
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body {
+    padding-left: 12rem;
+  }
+
+  #sideNav {
+    width: 12rem;
+  }
+
+  #sideNav .navbar-brand .img-profile {
+    max-width: 7rem;
+    max-height: 7rem;
+    border-width: 0.35rem;
+  }
+
+  #sideNav .navbar-nav .nav-item .nav-link {
+    font-size: 0.9rem;
   }
 }
 .social-icons .social-icon {
@@ -10945,15 +11019,20 @@ p.lead {
 }
 
 section.resume-section {
+  position: relative;
   display: flex;
   align-items: center;
+  overflow: hidden;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  max-width: 75rem;
+  max-width: none;
+  background-color: #fff;
 }
 section.resume-section .resume-section-content {
+  position: relative;
+  z-index: 1;
   width: 100%;
 }
 
@@ -10979,30 +11058,61 @@ section.resume-section .resume-section-content {
   position: relative;
   overflow: hidden;
   max-width: none;
-  background-color: #f7f7f5;
-  background-image: radial-gradient(#d8d8d8 1.2px, transparent 1.2px);
-  background-size: 52px 52px;
+  justify-content: center;
+  --cursor-x: 50%;
+  --cursor-y: 50%;
+  background-color: #fff;
+}
+
+.portfolio-hero::before {
+  position: absolute;
+  inset: -2rem;
+  content: "Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I\A Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I\A Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I\A Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I\A Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I\A Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I";
+  color: #e8e8e8;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1.25rem;
+  line-height: 4.4;
+  letter-spacing: 0.25rem;
+  white-space: pre;
+  pointer-events: none;
+}
+
+.portfolio-hero::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    radial-gradient(circle at var(--cursor-x) var(--cursor-y), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.045) 18rem, transparent 31rem);
+  opacity: 0;
+  transition: opacity 180ms ease;
+  pointer-events: none;
+}
+
+.portfolio-hero.is-cursor-active::after {
+  opacity: 1;
 }
 
 .portfolio-hero-content {
   position: relative;
-  max-width: 68rem;
+  z-index: 2;
+  max-width: 72rem;
+  text-align: center;
 }
 
 .portfolio-year {
   margin-left: 0;
-  margin-bottom: 1.25rem;
-  color: #b7b7b7;
+  margin-bottom: 2.4rem;
+  color: #9c9c9c;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 1rem;
-  letter-spacing: 0.35rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.28rem;
 }
 
 .portfolio-title {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 1.2rem;
-  min-height: 8rem;
+  min-height: 0;
 }
 
 .portfolio-intro {
@@ -11019,13 +11129,29 @@ section.resume-section .resume-section-content {
   position: relative;
   z-index: 1;
   margin: 0;
-  color: #0c0c0c;
+  color: #111;
   font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 2.1rem;
-  font-style: italic;
+  font-size: 4.4rem;
+  font-style: normal;
   font-weight: 700;
-  line-height: 0.95;
+  line-height: 1;
   text-transform: none;
+}
+
+.portfolio-greeting {
+  display: inline-block;
+  min-width: 5.6em;
+  cursor: default;
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.04rem;
+  transform: rotate(-1.5deg);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.portfolio-greeting.is-switching {
+  opacity: 0;
+  transform: translateY(0.16rem) rotate(-1.5deg);
 }
 
 .portfolio-tags {
@@ -11038,17 +11164,19 @@ section.resume-section .resume-section-content {
 
 .portfolio-summary {
   max-width: 54rem;
-  margin-top: 1.4rem;
-  margin-bottom: 0;
-  color: #444;
-  font-size: 1rem;
-  line-height: 1.9;
+  margin: 2rem auto 0;
+  color: #111;
+  font-size: 1.05rem;
+  line-height: 1.8;
 }
 
 .portfolio-contact {
-  margin-top: 4.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 5rem;
   color: #444;
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   line-height: 1.8;
 }
 
@@ -11061,6 +11189,23 @@ section.resume-section:not(.portfolio-hero) {
   color: #444;
   font-size: 1rem;
   line-height: 1.75;
+}
+
+section.resume-section:not(.portfolio-hero) .resume-section-content {
+  max-width: 75rem;
+}
+
+section.resume-section:not(.portfolio-hero)::before {
+  position: absolute;
+  inset: -2rem;
+  content: "Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I\A Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I\A Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I\A Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I\A Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I\A Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I  Y U Z A I";
+  color: #e8e8e8;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1.25rem;
+  line-height: 4.4;
+  letter-spacing: 0.25rem;
+  white-space: pre;
+  pointer-events: none;
 }
 
 section.resume-section:not(.portfolio-hero) h2 {
@@ -11098,22 +11243,103 @@ section.resume-section:not(.portfolio-hero) .mb-5 {
   margin-bottom: 2rem !important;
 }
 
+#projects {
+  align-items: flex-start;
+  padding-top: 3rem;
+}
+
+#projects .resume-section-content {
+  padding-top: 1rem;
+}
+
+.combined-profile {
+  display: grid;
+  gap: 3rem;
+}
+
+.combined-block h2 {
+  margin-bottom: 1.25rem !important;
+  font-size: 1.85rem !important;
+}
+
+.skill-list {
+  display: grid;
+  gap: 0.8rem;
+  max-width: 58rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-list li {
+  position: relative;
+  padding-left: 1.15rem;
+  color: #333;
+}
+
+.skill-list li::before {
+  position: absolute;
+  left: 0;
+  content: "/";
+  color: #111;
+  font-weight: 800;
+}
+
+.education-block {
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.education-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 58rem;
+  padding: 1rem 0;
+}
+
+.education-item + .education-item {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.education-item h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.2rem !important;
+}
+
+.education-item .subheading,
+.education-item p,
+.education-item .text-primary {
+  margin-bottom: 0;
+  font-size: 0.92rem !important;
+}
+
 #sideNav .navbar-nav .nav-item .nav-link {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   letter-spacing: 0.02rem;
   text-transform: none;
 }
 
 @media (max-width: 767.98px) {
   .portfolio-hero {
-    align-items: flex-start;
+    align-items: center;
     padding-top: 6rem;
+  }
+
+  .portfolio-hero::before {
+    font-size: 0.9rem;
+    line-height: 4.2;
+  }
+
+  .portfolio-hero::after {
+    display: none;
   }
 
   .portfolio-year {
     margin-left: 0;
-    font-size: 0.8rem;
-    letter-spacing: 0.22rem;
+    margin-bottom: 1.7rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.16rem;
   }
 
   .portfolio-title {
@@ -11127,7 +11353,7 @@ section.resume-section:not(.portfolio-hero) .mb-5 {
   }
 
   .portfolio-title h1 {
-    font-size: 1.7rem;
+    font-size: 2.45rem;
   }
 
   .portfolio-tags {
@@ -11137,11 +11363,12 @@ section.resume-section:not(.portfolio-hero) .mb-5 {
   }
 
   .portfolio-summary {
-    margin-top: 1.2rem;
-    font-size: 0.95rem;
+    margin-top: 1.4rem;
+    font-size: 0.92rem;
   }
 
   .portfolio-contact {
+    display: block;
     margin-top: 3rem;
   }
 
@@ -11151,5 +11378,26 @@ section.resume-section:not(.portfolio-hero) .mb-5 {
 
   section.resume-section:not(.portfolio-hero) h3 {
     font-size: 1.2rem;
+  }
+
+  #projects {
+    padding-top: 2rem;
+  }
+
+  .combined-profile {
+    gap: 2.25rem;
+  }
+
+  .combined-block h2 {
+    font-size: 1.55rem !important;
+  }
+
+  .education-item {
+    display: block;
+  }
+
+  .education-item .text-primary {
+    display: block;
+    margin-top: 0.4rem;
   }
 }

@@ -17,19 +17,16 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <nav class="navbar navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Clarence Taylor</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="鱼仔头像" />
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">关于我</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">教育背景</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">实习经历</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">核心技能</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">项目案列</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">项目经历</a></li>
                 </ul>
             </div>
         </nav>
@@ -38,10 +35,9 @@
             <!-- About-->
             <section class="resume-section portfolio-hero" id="about">
                 <div class="resume-section-content portfolio-hero-content">
-                    <div class="portfolio-year">PORTFOLIO · 2026</div>
+                    <div class="portfolio-year">YUZAI · PORTFOLIO · 2026</div>
                     <div class="portfolio-title">
-                        <div class="portfolio-intro">HELLO, I am</div>
-                        <h1>于骞</h1>
+                        <h1><span class="portfolio-greeting" data-en="HELLO, I'M" data-zh="你好，我是">HELLO, I'M</span> 鱼仔</h1>
                     </div>
                     <p class="portfolio-summary">
                         媒介PR执行 / KOC / KOL媒介商务合作 / 市场PM / 品牌内容宣传 / 社群运营
@@ -55,25 +51,35 @@
             <hr class="m-0" />
             <!-- Education-->
             <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">教育背景</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">华中农业大学</h3>
-                            <div class="subheading mb-3">科学技术史</div>
-                            <div>农业史</div>
-                            <p>GPA: 3.23</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2024 - 至今 
-                        </span></div>
+                <div class="resume-section-content combined-profile">
+                    <div class="combined-block skills-block">
+                        <h2>核心技能</h2>
+                        <ul class="skill-list">
+                            <li>AIagent使用：熟练使用 GPT、Claude 等大语言模型进行内容提效，能够结合文生图工具与基础代码能力，完成文案创作、资料整理、图片生成、网页搭建及简单工具制作。</li>
+                            <li>品牌内容运营：公众号内容策划、文案撰写、节点传播、产品卖点提炼及传播内容沉淀能力</li>
+                            <li>媒介 PR 合作：达人筛选、建联、合作 brief 输出、内容共创、排期跟进及交付管理全流程</li>
+                            <li>项目执行协同：展会传播、物料准备、信息统筹、跨部门沟通及项目推进能力</li>
+                            <li>数据与商业分析：会计背景，熟悉 Excel 数据整理、成本拆解、ROI 基础核算，可支持合作评估与复盘优化</li>
+                        </ul>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">青岛农业大学</h3>
-                            <div class="subheading mb-3">会计学</div>
-                            <p>GPA: 3.56</p>
+                    <div class="combined-block education-block">
+                        <h2>教育背景</h2>
+                        <div class="education-item">
+                            <div>
+                                <h3>华中农业大学</h3>
+                                <div class="subheading">科学技术史 · 农业史</div>
+                                <p>GPA: 3.23</p>
+                            </div>
+                            <span class="text-primary">2024 - 至今</span>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2016.9-2020.6</span></div>
+                        <div class="education-item">
+                            <div>
+                                <h3>青岛农业大学</h3>
+                                <div class="subheading">会计学</div>
+                                <p>GPA: 3.56</p>
+                            </div>
+                            <span class="text-primary">2016.9-2020.6</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -133,20 +139,6 @@
 
   </div>
 </section>
-            <hr class="m-0" />
-            <!-- Skills-->
-            <section class="resume-section" id="skills">
-  <div class="resume-section-content">
-    <h2 class="mb-5">核心技能</h2>
-    <ul class="list-unstyled">
-      <li>• 品牌内容运营：公众号内容策划、文案撰写、节点传播、产品卖点提炼及传播内容沉淀能力</li>
-      <li>• 媒介 PR 合作：达人筛选、建联、合作 brief 输出、内容共创、排期跟进及交付管理全流程</li>
-      <li>• 项目执行协同：展会传播、物料准备、信息统筹、跨部门沟通及项目推进能力</li>
-      <li>• 数据与商业分析：会计背景，熟悉 Excel 数据整理、成本拆解、ROI 基础核算，可支持合作评估与复盘优化</li>
-    </ul>
-  </div>
-            </section>
-            <hr class="m-0" />
             <!-- Projects-->
             <section class="resume-section" id="projects">
   <div class="resume-section-content">
