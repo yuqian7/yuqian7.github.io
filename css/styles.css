@@ -11314,10 +11314,95 @@ section.resume-section:not(.portfolio-hero) .mb-5 {
   font-size: 0.92rem !important;
 }
 
+.portfolio-project-content {
+  width: 100%;
+}
+
+.portfolio-case h2 {
+  margin-bottom: 0.65rem !important;
+  font-size: clamp(2rem, 3.2vw, 3.2rem) !important;
+  line-height: 1.18;
+}
+
+.portfolio-case-subtitle {
+  margin-bottom: 1.8rem;
+  color: #333;
+  font-size: 1.05rem !important;
+  line-height: 1.6;
+}
+
+.portfolio-case-copy {
+  max-width: 62rem;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+.portfolio-case-copy p {
+  margin-bottom: 1.2rem;
+  font-size: 0.98rem !important;
+  line-height: 1.75;
+}
+
+.portfolio-case-copy h3 {
+  margin-bottom: 0.9rem;
+  color: #111;
+  font-size: 1.12rem !important;
+  line-height: 1.35;
+}
+
+.portfolio-case-copy ul {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.portfolio-case-copy li {
+  margin-bottom: 0.45rem;
+  font-size: 0.95rem !important;
+  line-height: 1.65;
+}
+
+.portfolio-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 2rem;
+  width: min(100%, 68rem);
+}
+
+.portfolio-image-grid img {
+  display: block;
+  width: 100%;
+  max-width: 31rem;
+  justify-self: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.12);
+}
+
+.kol-image-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem;
+  width: min(100%, 72rem);
+}
+
+.kol-image-grid img {
+  display: block;
+  width: 100%;
+  border-radius: 0.45rem;
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.12);
+}
+
 #sideNav .navbar-nav .nav-item .nav-link {
   font-size: 1.15rem;
   letter-spacing: 0.02rem;
   text-transform: none;
+}
+
+@media (max-width: 1199.98px) {
+  .kol-image-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -11400,4 +11485,19 @@ section.resume-section:not(.portfolio-hero) .mb-5 {
     display: block;
     margin-top: 0.4rem;
   }
+
+  .portfolio-case h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .portfolio-image-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .kol-image-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+  }
+
 }
